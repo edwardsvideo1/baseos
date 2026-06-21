@@ -92,10 +92,10 @@ The following hardware inventory components and firmware versions were used for 
 
 ### Transceivers
 
-| Port | Description | Vendor | Part Number | Type | Interface | Revision |
-| --- | --- | --- | --- | --- | --- | --- |
-| NetworkTransceiver.Integrated.1:NIC.Slot.1-1 | Network Transceiver in NIC in Slot 1 Port 1 | DELL EMC | FTLC9555REPM3-E5 | QSFP28 or later | Optical Fiber | B1 |
-| NetworkTransceiver.Integrated.1:NIC.Slot.2-2 | Network Transceiver in NIC in Slot 2 Port 2 | DELL EMC | FTLC9555REPM3-E5 | QSFP28 or later | Optical Fiber | B1 |
+| Port | Description | Vendor | Type | Interface | Revision |
+| --- | --- | --- | --- | --- | --- |
+| NetworkTransceiver.Integrated.1:NIC.Slot.1-1 | Network Transceiver in NIC in Slot 1 Port 1 | DELL EMC | QSFP28 or later | Optical Fiber | B1 |
+| NetworkTransceiver.Integrated.1:NIC.Slot.2-2 | Network Transceiver in NIC in Slot 2 Port 2 | DELL EMC | QSFP28 or later | Optical Fiber | B1 |
 
 ### Additional Components
 
