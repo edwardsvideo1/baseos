@@ -6,4 +6,4 @@ Normally on Container platforms with Flatcar, patching is done by updating confi
 sudo kexec -l vmlinuz --initrd=cpio.gz --reuse-cmdline
 system systemctl kexec
 ```
-The kexec process of stopping services and booting the new kernel takes about a minute.  See the example [flatcar-kexec-timing-fast.mov](./flatcar-kexec-timing-fast.mov) file.
+The kexec process of stopping services and booting the new kernel takes about a minute.  See the example [flatcar-kexec-timing-fast.mov](flatcar-kexec-timing-fast.mov) file.
