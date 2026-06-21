@@ -14,7 +14,7 @@ The Default ipxe.iso from https://boot.ipxe.org/ipxe.iso will will not meet the 
 #define NET_PROTO_LLDP		/* Link Layer Discovery protocol */
 #define NET_PROTO_STP		/* Spanning Tree protocol */
 ```
-5.  Create a customized iPXE Script to be used to embed into the ISO.  Name is slaacifconf.ipxe  Process referenced here https://ipxe.org/scripting.  This script loops through all the interfaces until an SLAAC IPv6 address has been assigned succesfully via the upstream router.  It then reaches out to a hardcoded IPv6 destination for its base ipxe.cfg.  $$\color{red}{This \ is \ likely \ the \ only \ IP \ that \ will \ be \ hardcoded \ as \ part \ of \ this \ design.}$$  A DNS name would be ideal, but time didn't allow for that testing.
+5.  Create a customized iPXE Script to be used to embed into the ISO.  Name it `slaacifconf.ipxe`  (Basic process referenced here https://ipxe.org/scripting).  This script loops through all the interfaces until an SLAAC IPv6 address has been assigned succesfully via the upstream router.  It then reaches out to a hardcoded IPv6 destination for its base ipxe.cfg.  $$\color{red}{This \ is \ likely \ the \ only \ IP \ that \ will \ be \ hardcoded \ as \ part \ of \ this \ design.}$$  A DNS name would be ideal, but time didn't allow for that testing.
 ```#!ipxe
 # Label to retry if the initial attempt fails
 :loop
