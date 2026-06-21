@@ -14,8 +14,9 @@ The Default ipxe.iso from https://boot.ipxe.org/ipxe.iso will will not meet the 
 #define NET_PROTO_LLDP		/* Link Layer Discovery protocol */
 #define NET_PROTO_STP		/* Spanning Tree protocol */
 ```
-5.  Create a customized iPXE Script to be used to embed into the ISO.  Name it `slaacifconf.ipxe`  (Basic process referenced here https://ipxe.org/scripting).  This script loops through all the interfaces until an SLAAC IPv6 address has been assigned succesfully via the upstream router.  It then reaches out to a hardcoded IPv6 destination for its base ipxe.cfg.  $$\color{red}{This \ is \ likely \ the \ only \ IP \ that \ will \ be \ hardcoded \ as \ part \ of \ this \ design.}$$  A DNS name would be ideal, but time didn't allow for that testing.
-```#!ipxe
+5.  Create a customized iPXE Script to be used to embed into the ISO.  Name it `slaacifconf.ipxe`  (Basic process referenced here https://ipxe.org/scripting).  This script loops through all the interfaces until an SLAAC IPv6 address has been assigned succesfully via the upstream router.  It then reaches out to a hardcoded IPv6 destination for its base `baseipxe.cfg`.  $$\color{red}{This \ is \ likely \ the \ only \ stuff \ that \ will \ be \ hardcoded \ as \ part \ of \ this \ design.}$$  A DNS name would be ideal, but time didn't allow for that testing.
+```
+#!ipxe
 # Label to retry if the initial attempt fails
 :loop
 # ifconf will automatically try all interfaces and configurators (e.g., ifconf || goto loop
@@ -27,8 +28,8 @@ echo ${netX/ifname} MAC Address: ${netX/mac}
 echo ${netX/ifname} IPv6 Address: ${netX/ip6}
 
 # Chainload the base iPXE configuration file
-chain http://[<IPv6AddressofWebserver>]/baseipxe.cfg
+chain http://[<IPv6_Webserver_IP>]/baseipxe.cfg
 ```
 5. Embed the script into the image.  Process here https://ipxe.org/embed.
 ```make bin-x86_64-efi/ipxe.iso EMBED=slaacifconf.ipxe```
-6. Assuming compilation is successful, proceed to use this ipxe.iso as a bootable image via virtual CD ROM.
+6. Assuming compilation is successful, proceed to use this `ipxe.iso` as a bootable image via virtual CD ROM.
