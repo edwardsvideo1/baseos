@@ -1,6 +1,23 @@
 # Dell R660 Hardware Platform
 The following hardware inventory components and firmware versions were used for this test effort:
 
+## BIOS System
+
+| Property | Value |
+| --- | --- |
+| Manufacturer | Dell Inc. |
+| Model | PowerEdge R660 |
+| Form Factor | 1U |
+| Generation | 16G Monolithic |
+| CPU Sockets | 2 populated / 2 max |
+| DIMM Slots | 16 populated / 32 max |
+| PCIe Slots | 2 populated / 3 max |
+| Total Memory | 524,288 MB (512 GB) |
+| Max Memory Capacity | 12,582,912 MB (~12 TB) |
+| Memory Mode | OptimizerMode |
+| Memory ECC | Multi-bit ECC |
+| Power Cap | 340W (disabled) |
+
 ## Processors
 
 | Socket | Model | Cores | Threads | Base Clock | Max (Turbo) Clock | Hyper-Threading | Turbo Mode |
@@ -30,6 +47,14 @@ The following hardware inventory components and firmware versions were used for 
 | DIMM.Socket.B8 | Hynix Semiconductor | DDR5 RDIMM | 32768 MB | 4800 MHz | 4400 MT/s | Double Rank | CPU 2 |
 
 ## Disks
+
+### Disk Controllers
+
+| Controller | Description | Product | Manufacturer | PCIe Speed | Encryption |
+| --- | --- | --- | --- | --- | --- |
+| AHCI.Embedded.1-1 | Embedded AHCI 1 | Sapphire Rapids SATA AHCI Controller | DELL (Intel) | N/A | Not Capable |
+| AHCI.Embedded.2-1 | Embedded AHCI 2 | Sapphire Rapids SATA AHCI Controller | DELL (Intel) | N/A | Not Capable |
+| BOSS.SL.12-1 | BOSS in SL 12 | BOSS-N1 Monolithic | DELL (Marvell) | Gen 3 | Capable (Disabled) |
 
 ### Physical Disks
 
@@ -76,9 +101,6 @@ The following hardware inventory components and firmware versions were used for 
 
 | Component | Description | Manufacturer | Model |
 | --- | --- | --- | --- |
-| AHCI.Embedded.1-1 | Embedded AHCI 1 | Intel Corporation |  |
-| AHCI.Embedded.2-1 | Embedded AHCI 2 | Intel Corporation |  |
-| BOSS.SL.12-1 | BOSS in SL 12 | Marvell Technology Group Ltd. |  |
 | Communicate.Embedded.1-1 | Communicate.Embedded.1-1 | Intel Corporation |  |
 | Enclosure.Internal.0-1 | PCIe SSD Backplane 1 |  |  |
 | Fan.Embedded.1A | Fan 1A |  |  |
@@ -102,7 +124,6 @@ The following hardware inventory components and firmware versions were used for 
 | PSU.Slot.2 | Power Supply 2 | DELL | PWR SPLY,1100W,RDNT,LTON |
 | SerialBus.Embedded.4-1 | SerialBus.Embedded.4-1 | Intel Corporation |  |
 | SMBus.Embedded.3-1 | Embedded SM Bus 3 | Intel Corporation |  |
-| System.Embedded.1 | System | Dell Inc. | PowerEdge R660 |
 | Video.Embedded.1-1 | Embedded Video Controller 1 | Matrox Electronics Systems Ltd. |  |
 
 ## Firmware
