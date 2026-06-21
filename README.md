@@ -1,4 +1,4 @@
-# baseos
+# BaseOS (Base Operating System)
 Pre-Prod BaseOS for MaaS-like initiatives.
 
 ## Requirements
@@ -15,3 +15,4 @@ Pre-Prod BaseOS for MaaS-like initiatives.
 -  Enable a framework for container workloads to be layered in over time, to possibly include cabling checks, hardware checks, health checks, firmware updates, etc.
 -  Enable base shell of an OS that can be accessible on the network with minimal configuration.
 -  Create simple chainload-like bootstrap design flexible enough to handle an environment that is in infant stages of configuration or has been fully configured for production.
+-  Proof of Concept "patching" using kexec on Flatcar with Ignition.  Upgrade Kernels without Reboot to reduce downtime.
