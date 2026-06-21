@@ -1,11 +1,10 @@
-* Dell R660 Hardware Platform
+# Dell R660 Hardware Platform
 The following components and firmware were used for this test effort:
-** Firmware
+## Firmware
 | Component | FW Version |
 |:-|:-|
 | Backplane 1 | 7.20 |
 | BIOS | 2.10.1 |
-| Bootstrap OS |	Not Installed |
 | BOSS-N1 Monolithic |	2.1.13.2038 |
 | Broadcom NetXtreme Gigabit Ethernet (BCM5720) | 22.31.6 |
 | Broadcom NetXtreme Gigabit Ethernet (BCM5720) | 22.31.6 |
