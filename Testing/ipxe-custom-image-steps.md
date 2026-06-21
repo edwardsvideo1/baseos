@@ -1,4 +1,4 @@
-# iPXE Customization
+# iPXE custom image steps
 
 The Default ipxe.iso from https://boot.ipxe.org/ipxe.iso will will not meet the requirements for this effort and needs to be customized.  Here are the steps:
 
