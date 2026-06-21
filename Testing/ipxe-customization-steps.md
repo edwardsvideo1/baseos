@@ -30,5 +30,5 @@ echo ${netX/ifname} IPv6 Address: ${netX/ip6}
 chain http://[<IPv6AddressofWebserver>]/baseipxe.cfg
 ```
 5. Embed the script into the image.  Process here https://ipxe.org/embed.
-```make bin-x86_64-efi/ipxe.iso EMBED=slaacifconf.ipxe```  
-6.  
+```make bin-x86_64-efi/ipxe.iso EMBED=slaacifconf.ipxe```
+6. Assuming compilation is successful, proceed to use this ipxe.iso as a bootable image via virtual CD ROM.
