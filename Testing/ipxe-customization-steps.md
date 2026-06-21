@@ -5,15 +5,16 @@ The Default ipxe.iso from https://boot.ipxe.org/ipxe.iso will will not meet the 
 1. Find or build an amd64 or x86_64 Rocky machine.  I used an Ubuntu VM and created a Docker image for rocky-latest.
 2. From the command line on Rocky, follow the steps on https://ipxe.org/download to clone the ipxe git repo (iPXE's source code) and download necessary packages needed for the compilation of iPXE.
 3. Edit the ipxe/src/config/general.h file and make these changes:
-```/* Protocols supported on all platforms */```  
-```#undef NET_PROTO_EAPOL		/* EAP over LAN protocol */```  
-```//#define NET_PROTO_FCOE	/* Fibre Channel over Ethernet protocol */```  
-```#define NET_PROTO_IPV4		/* IPv4 protocol */```  
-```#define NET_PROTO_IPV6		/* IPv6 protocol */```  
-```#define NET_PROTO_LACP		/* Link Aggregation control protocol */```  
-```#define NET_PROTO_LLDP		/* Link Layer Discovery protocol */```  
-```#define NET_PROTO_STP		/* Spanning Tree protocol */```
-4.  Create a customized iPXE Script to be used to embed into the ISO.  Name is slaacifconf.ipxe  Process referenced here https://ipxe.org/scripting.  This script loops through all the interfaces until an SLAAC IPv6 address has been assigned succesfully via the upstream router.  It then reaches out to a hardcoded IPv6 destination for its base ipxe.cfg.  This is likely the only IP that will be hardcoded as part of this design.  A DNS name would be ideal, but time didn't allow for that testing.
+```/* Protocols supported on all platforms */
+#undef NET_PROTO_EAPOL		/* EAP over LAN protocol */
+//#define NET_PROTO_FCOE	/* Fibre Channel over Ethernet protocol */
+#define NET_PROTO_IPV4		/* IPv4 protocol */
+#define NET_PROTO_IPV6		/* IPv6 protocol */
+#define NET_PROTO_LACP		/* Link Aggregation control protocol */
+#define NET_PROTO_LLDP		/* Link Layer Discovery protocol */
+#define NET_PROTO_STP		/* Spanning Tree protocol */
+```
+5.  Create a customized iPXE Script to be used to embed into the ISO.  Name is slaacifconf.ipxe  Process referenced here https://ipxe.org/scripting.  This script loops through all the interfaces until an SLAAC IPv6 address has been assigned succesfully via the upstream router.  It then reaches out to a hardcoded IPv6 destination for its base ipxe.cfg.  $$\color{red}{This \ is \ likely \ the \ only \ IP \ that \ will \ be \ hardcoded \ as \ part \ of \ this \ design.}$$  A DNS name would be ideal, but time didn't allow for that testing.
 ```#!ipxe
 # Label to retry if the initial attempt fails
 :loop
