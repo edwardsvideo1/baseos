@@ -8,4 +8,13 @@ system systemctl kexec
 ```
 The kexec process of stopping services and booting the new kernel takes about a minute.  See the example [flatcar-kexec-timing-fast.mov](flatcar-kexec-timing-fast.mov) file.  To watch the video, the file will need to be downloaded locally.
 
-Note!  This process DID work with both IPv4 and IPv6 (SLAAC).
+Note!  This process DID work with both IPv4 and IPv6 (SLAAC).  It also works as upgrade or downgrade at least for the testing done with the following versions:
+
+Kernel version BEFORE kexec (LTS):
+```
+Linux localhost 6.6.141-flatcar #1 SMP PREEMPT_DYNAMIC Tue May 26 13:32:30 -00 2026 x86_64 Intel(R) Xeon(R) Gold 6430 GenuineIntel GNU/Linux
+```
+Kernel version AFTER kexec (Beta):
+```
+Linux localhost 6.12.87-flatcar #1 SMP PREEMPT_DYNAMIC Fri May  8 23:12:47 -00 2026 x86_64 Intel(R) Xeon(R) Gold 6430 GenuineIntel GNU/Linux
+```
