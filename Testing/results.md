@@ -2,8 +2,8 @@
 Note:  All testing for this effort thus far was on the Dell R660 hardware platform.  Detailed Hardware/Firmware information [here](dell-r660.md): 
 
 ### Flatcar OS Versions
-| OS | Release | kernel | containerd | docker | ignition | kernel | systemd |
-| - | - | - | - | - | - | - | - |
+| OS | Release | containerd | docker | ignition | kernel | systemd |
+| - | - | - | - | - | - | - |
 | 4081.3.8 | LTS | 6.6.141-flatcar | 1.7.21 | 26.1.0 | 2.19.0 | 6.6.141 | 255 |
 
 Flatcar doesn't support UEFI by default.  Today in Production, this is achieved by using iPXE as a bootloader, which bypasses limitations of flatcar's EFI support.
