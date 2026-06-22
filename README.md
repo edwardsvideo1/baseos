@@ -1,4 +1,4 @@
-# BaseOS (Base Operating System)
+# BaseOS (Base Operating System) Framework
 Pre-Prod BaseOS for MaaS-like initiatives.
 
 ## Requirements
