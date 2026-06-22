@@ -18,3 +18,5 @@ initrd http://[IPv6_Webserver_IP]/flatcar/flatcar_production_pxe_image.cpio.gz
 boot
 ```
 3. For reference to the process flow of iPXE chainloading use this [README.md](../README.md#process-flow)
+Successfull screenshot here:
+  <img width="795" height="483" alt="Screenshot 2026-06-21 at 7 32 07 PM" src="https://github.com/user-attachments/assets/bd62ffb8-6135-4b3d-9dd9-ceb613ec33d3" />
