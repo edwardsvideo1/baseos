@@ -17,3 +17,4 @@ kernel http://[IPv6_Webserver_IP]/flatcar/flatcar_production_pxe.vmlinuz rootdev
 initrd http://[IPv6_Webserver_IP]/flatcar/flatcar_production_pxe_image.cpio.gz
 boot
 ```
+3. For reference to the process flow of iPXE chainloading use this [README.md](README.md#process-flow)
