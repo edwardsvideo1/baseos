@@ -19,13 +19,18 @@ Pre-Prod BaseOS for MaaS-like initiatives.
 
 ```mermaid
 sequenceDiagram
+    participant Builder as Build System
     participant BMC as BMC / iDRAC
     participant iPXE as iPXE
-    participant Net as Network (SLAAC)
-    participant Cfg as Config Server
+    participant Net as Router (SLAAC)
+    participant Cfg as Web Server
     participant Kernel as Flatcar Kernel
     participant Systemd as Systemd
 
+    Builder->>Builder: Embed iPXE script into iPXE ISO
+    Builder->>Cfg: Upload custom iPXE ISO
+    BMC->>Cfg: Fetch custom iPXE ISO
+    Cfg-->>BMC: Custom iPXE ISO returned
     BMC->>iPXE: Mount Virtual CD-ROM & boot iPXE custom image
     iPXE->>Net: SLAAC — request IPv6 address
     Net-->>iPXE: IPv6 address assigned
@@ -38,5 +43,5 @@ sequenceDiagram
     Net-->>Kernel: IPv6 address assigned
     Kernel->>Cfg: GET Ignition config
     Cfg-->>Kernel: Ignition config returned
-    Kernel->>Systemd: Apply Ignition & run Systemd
+    Kernel->>Systemd: Apply Ignition & run systemd
 ```
