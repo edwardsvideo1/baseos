@@ -126,7 +126,7 @@ The following hardware inventory components and firmware versions were used for 
 | SMBus.Embedded.3-1 | Embedded SM Bus 3 | Intel Corporation |  |
 | Video.Embedded.1-1 | Embedded Video Controller 1 | Matrox Electronics Systems Ltd. |  |
 
-## Firmware
+## Firmware Versions
 | Component | FW Version |
 |:-|:-|
 | Backplane 1 | 7.20 |
