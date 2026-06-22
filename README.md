@@ -17,6 +17,7 @@ Pre-Prod BaseOS for MaaS-like initiatives.
 -  Create simple chainload-like bootstrap design flexible enough to handle an environment that is in infant stages of configuration or has been fully configured for production.
 -  Proof of Concept "patching" using kexec on Flatcar with Ignition.  Upgrade Kernels without Reboot to reduce downtime.
 
+## Process Flow
 ```mermaid
 sequenceDiagram
     participant Builder as Build System
